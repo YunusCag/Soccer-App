@@ -11,7 +11,7 @@ import javax.inject.Inject
 class SportRepository @Inject constructor(
     private val api: SportDataApi
 ) {
-    
+
     suspend fun getLeagueTeams(
         countryId: Int = 48,
         leagueId: Int = 314
