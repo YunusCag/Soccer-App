@@ -23,4 +23,13 @@
         <item name="android:textColorSecondary">@color/colorAppBarTitle</item>
         <item name="actionMenuTextColor">@color/colorAppBarTitle</item>
     </style>
+    <style name="FABStyle" parent="Widget.MaterialComponents.ExtendedFloatingActionButton">
+        <item name="backgroundTint">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorAppBarTitle</item>
+        <item name="iconTint">@color/colorWhite</item>
+    </style>
+    <style name="CustomSwitch">
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
 </resources>

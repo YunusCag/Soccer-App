@@ -9,7 +9,7 @@
         app:actionViewClass="androidx.appcompat.widget.SearchView"
         app:showAsAction="always|collapseActionView" />
     <item
-        android:id="@+id/destination_setting"
+        android:id="@+id/action_setting"
         android:icon="@drawable/ic_setting"
         android:title="@string/home_setting"
         app:showAsAction="ifRoom" />

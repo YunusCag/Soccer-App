@@ -31,8 +31,16 @@ class HomeViewModel @Inject constructor(
         searchQuery.postValue(query)
     }
 
+    fun fixtureFabClick()=viewModelScope.launch{
+        _homeEventChannel.send(HomeEvent.NavigateFixtureScreen)
+    }
+    fun settingMenuClick()=viewModelScope.launch {
+        _homeEventChannel.send(HomeEvent.NavigateSettingScreen)
+    }
+
     sealed class HomeEvent {
         object NavigateFixtureScreen : HomeEvent()
+        object NavigateSettingScreen:HomeEvent()
     }
 
 }

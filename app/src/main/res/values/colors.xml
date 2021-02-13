@@ -9,8 +9,10 @@
     <color name="colorWhite">#FFFFFFFF</color>
     <color name="colorFaintTransparent">#14000000</color>
 
+    <color name="colorAccent">#D81B60</color>
     <color name="colorGrey">#BDBDBD</color>
     <color name="colorDarkBlue">#263238</color>
 
     <color name="colorAppBarTitle">#FFFFFFFF</color>
+    <color name="colorHomeBackground">#42A5F5</color>
 </resources>
