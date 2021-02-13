@@ -8,4 +8,9 @@
     <color name="colorBlack">#FF000000</color>
     <color name="colorWhite">#FFFFFFFF</color>
     <color name="colorFaintTransparent">#14000000</color>
+
+    <color name="colorGrey">#BDBDBD</color>
+    <color name="colorDarkBlue">#263238</color>
+
+    <color name="colorAppBarTitle">#FFFFFFFF</color>
 </resources>

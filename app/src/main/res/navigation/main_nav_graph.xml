@@ -8,6 +8,6 @@
     <fragment
         android:id="@+id/destination_home"
         android:name="com.yunuscagliyan.soccerapp.ui.home.HomeFragment"
-        android:label="fragment_home"
+        android:label="Bundesliga Germany"
         tools:layout="@layout/fragment_home" />
 </navigation>

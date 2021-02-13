@@ -7,24 +7,45 @@
     android:orientation="vertical"
     tools:context=".ui.home.HomeFragment">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:titleTextColor="@color/colorAppBarTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:minHeight="?attr/actionBarSize"
+        style="@style/ToolBarStyle" />
+
     <com.facebook.shimmer.ShimmerFrameLayout
         android:id="@+id/shimmer_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         app:shimmer_base_color="@color/colorWhite"
         app:shimmer_highlight_color="@color/colorFaintTransparent"
-        android:visibility="gone"
         tools:visibility="visible">
-        <LinearLayout
+
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-            <include layout="@layout/skeleton_shimmer_card"/>
-            <include layout="@layout/skeleton_shimmer_card"/>
-            <include layout="@layout/skeleton_shimmer_card"/>
-            <include layout="@layout/skeleton_shimmer_card"/>
-            <include layout="@layout/skeleton_shimmer_card"/>
-        </LinearLayout>
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/skeleton_shimmer_card" />
+
+                <include layout="@layout/skeleton_shimmer_card" />
+
+                <include layout="@layout/skeleton_shimmer_card" />
+
+                <include layout="@layout/skeleton_shimmer_card" />
+
+                <include layout="@layout/skeleton_shimmer_card" />
+                <include layout="@layout/skeleton_shimmer_card" />
+            </LinearLayout>
+        </ScrollView>
 
     </com.facebook.shimmer.ShimmerFrameLayout>
 
@@ -33,10 +54,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:visibility="gone"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/item_team_card"
-        android:visibility="gone"
-        tools:visibility="gone"/>
+        tools:visibility="gone" />
 
 
 </LinearLayout>

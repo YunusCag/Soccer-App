@@ -8,7 +8,6 @@ import retrofit2.http.Query
 interface SportDataApi {
     @GET("teams")
     suspend fun getLeagueTeams(
-        @Query("country_id") countryId: Int,
-        @Query("league_id") leagueId: Int
+        @Query("teamName") teamName:String
     ):LeagueTeamsResult
 }

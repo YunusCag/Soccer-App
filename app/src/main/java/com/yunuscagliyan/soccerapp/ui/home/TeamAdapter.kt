@@ -9,8 +9,16 @@ import com.bumptech.glide.Glide
 import com.yunuscagliyan.soccerapp.data.model.Team
 import com.yunuscagliyan.soccerapp.databinding.ItemTeamCardBinding
 
-class TeamAdapter : ListAdapter<Team?, TeamAdapter.TeamViewHolder>(DiffCallback()) {
+class TeamAdapter : RecyclerView.Adapter<TeamAdapter.TeamViewHolder>() {
 
+
+    private val teamList=ArrayList<Team?>()
+
+    fun submitTeamList(list:List<Team?>){
+        teamList.clear()
+        teamList.addAll(list)
+        notifyDataSetChanged()
+    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TeamViewHolder {
         val binding =
             ItemTeamCardBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -18,10 +26,13 @@ class TeamAdapter : ListAdapter<Team?, TeamAdapter.TeamViewHolder>(DiffCallback(
     }
 
     override fun onBindViewHolder(holder: TeamViewHolder, position: Int) {
-        val team = getItem(position)
+        val team = teamList[position]
         team?.let {
             holder.bindTeam(it)
         }
+    }
+    override fun getItemCount(): Int {
+        return teamList.size
     }
 
     class TeamViewHolder(private val binding: ItemTeamCardBinding) :
@@ -30,6 +41,7 @@ class TeamAdapter : ListAdapter<Team?, TeamAdapter.TeamViewHolder>(DiffCallback(
         fun bindTeam(team: Team) {
             binding.apply {
                 tvTeamName.text = team.name ?: ""
+                tvTeamShortName.text = team.shortCode ?: ""
                 Glide.with(itemView)
                     .load(team.logo)
                     .into(ivTeamLogo)
@@ -48,6 +60,8 @@ class TeamAdapter : ListAdapter<Team?, TeamAdapter.TeamViewHolder>(DiffCallback(
         ) = oldItem == newItem
 
     }
+
+
 
 
 }

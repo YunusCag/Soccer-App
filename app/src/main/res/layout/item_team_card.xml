@@ -1,34 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="8dp"
-    app:cardBackgroundColor="@color/colorWhite"
     android:elevation="5dp"
+    app:cardBackgroundColor="@color/colorWhite"
     app:cardCornerRadius="12dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="16dp">
 
         <ImageView
             android:id="@+id/iv_team_logo"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:scaleType="fitXY"/>
+            android:scaleType="fitXY"
+            tools:src="@drawable/okuyan_balik_bg" />
 
-        <TextView
-            android:id="@+id/tv_team_name"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
-            android:fontFamily="sans-serif-black"
-            android:textColor="@color/colorBlack"
-            android:textSize="20sp"
-            tools:text="Galatasaray" />
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_team_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="20sp"
+                tools:text="Galatasaray" />
+            <TextView
+                android:id="@+id/tv_team_short_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:textAlignment="textStart"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/colorGrey"
+                android:textSize="16sp"
+                tools:text="GS" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:textAlignment="textStart"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/colorGrey"
+                android:textSize="20sp"
+                android:text="🇩🇪" />
+        </LinearLayout>
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>
