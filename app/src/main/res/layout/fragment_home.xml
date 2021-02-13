@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.home.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shimmer_base_color="@color/colorWhite"
+        app:shimmer_highlight_color="@color/colorFaintTransparent"
+        android:visibility="gone"
+        tools:visibility="visible">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include layout="@layout/skeleton_shimmer_card"/>
+            <include layout="@layout/skeleton_shimmer_card"/>
+            <include layout="@layout/skeleton_shimmer_card"/>
+            <include layout="@layout/skeleton_shimmer_card"/>
+            <include layout="@layout/skeleton_shimmer_card"/>
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_team"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_team_card"
+        android:visibility="gone"
+        tools:visibility="gone"/>
 
-</FrameLayout>
+
+</LinearLayout>

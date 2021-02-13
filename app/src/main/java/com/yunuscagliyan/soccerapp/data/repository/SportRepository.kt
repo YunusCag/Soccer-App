@@ -5,6 +5,7 @@ import com.yunuscagliyan.soccerapp.data.model.Team
 import com.yunuscagliyan.soccerapp.utils.Resource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import timber.log.Timber
 import java.lang.Exception
 import javax.inject.Inject
 

@@ -88,6 +88,8 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
 
+    //Shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
 
     //Timber
     implementation 'com.jakewharton.timber:timber:4.7.1'
