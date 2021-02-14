@@ -10,14 +10,15 @@
     <color name="colorFaintTransparent">#14000000</color>
 
     <!--Team Card-->
-    <color name="colorTeamCardBackground">#FFFFFFFF</color>
-    <color name="colorTitle">#FF000000</color>
-    <color name="colorSubtitle">#10000000</color>
+    <color name="colorTeamCardBackground">#383e56</color>
+    <color name="colorTitle">#FFFFFFFF</color>
+    <color name="colorSubtitle">#10FFFFFF</color>
+
 
     <color name="colorAccent">#D81B60</color>
     <color name="colorGrey">#BDBDBD</color>
     <color name="colorDarkBlue">#263238</color>
 
     <color name="colorAppBarTitle">#FFFFFFFF</color>
-    <color name="colorHomeBackground">#42A5F5</color>
+    <color name="colorHomeBackground">#FF000000</color>
 </resources>

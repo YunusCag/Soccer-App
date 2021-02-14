@@ -1,5 +1,6 @@
 package com.yunuscagliyan.soccerapp.data.api
 
+import com.yunuscagliyan.soccerapp.data.model.FixtureResult
 import com.yunuscagliyan.soccerapp.data.model.LeagueTeamsResult
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -8,6 +9,9 @@ import retrofit2.http.Query
 interface SportDataApi {
     @GET("teams")
     suspend fun getLeagueTeams(
-        @Query("teamName") teamName:String
-    ):LeagueTeamsResult
+        @Query("teamName") teamName: String
+    ): LeagueTeamsResult
+
+    @GET("fixture")
+    suspend fun getFixture(): FixtureResult
 }

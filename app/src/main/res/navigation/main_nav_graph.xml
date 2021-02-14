@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/destination_home"
         android:name="com.yunuscagliyan.soccerapp.ui.home.HomeFragment"
-        android:label="Bundesliga Germany"
+        android:label="@string/home_app_bar_title"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_fixture"
@@ -20,11 +20,11 @@
     <fragment
         android:id="@+id/destination_fixture"
         android:name="com.yunuscagliyan.soccerapp.ui.fixture.FixtureFragment"
-        android:label=""
+        android:label="@string/fixture_page_app_bar_title"
         tools:layout="@layout/fragment_fixture" />
     <fragment
         android:id="@+id/destination_setting"
         android:name="com.yunuscagliyan.soccerapp.ui.setting.SettingFragment"
-        android:label="Setting"
+        android:label="@string/setting_page_app_bar_title"
         tools:layout="@layout/fragment_setting" />
 </navigation>

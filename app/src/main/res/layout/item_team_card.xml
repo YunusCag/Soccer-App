@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     android:elevation="5dp"
-    app:cardBackgroundColor="@color/colorWhite"
+    app:cardBackgroundColor="@color/colorTeamCardBackground"
     app:cardCornerRadius="12dp">
 
     <LinearLayout
@@ -35,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:textAlignment="textStart"
                 android:textStyle="bold"
-                android:textColor="@color/colorDarkBlue"
+                android:textColor="@color/colorTitle"
                 android:textSize="20sp"
                 tools:text="Galatasaray" />
             <TextView
@@ -60,4 +61,4 @@
         </LinearLayout>
 
     </LinearLayout>
-</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>

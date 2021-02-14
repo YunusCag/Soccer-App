@@ -5,4 +5,8 @@
     <string name="home_search">Search</string>
     <string name="home_setting">Setting</string>
     <string name="home_fixture">Fixture</string>
+    <string name="week_with_dot">. Week</string>
+    <string name="home_app_bar_title">Bundesliga Germany</string>
+    <string name="fixture_page_app_bar_title">Weekly Fixture</string>
+    <string name="setting_page_app_bar_title">Setting</string>
 </resources>
