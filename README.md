@@ -1,5 +1,16 @@
 # Soccer-App
 Bu uygulamada kullanılan soccer-app-backend'ini NodeJS ile yazıp Heroku platformuna deploy işlemini gerçekleştirdim. API'deki Takım ve Fikstür bilgileri statiktir.
+Uygulama hazırlanırken aşağıdaki yapılar kullanılmıştır:
+<ul>
+ <li>Android Navigation Component</li>
+ <li>DataStore</li>
+ <li>LiveData</li>
+ <li>ViewModel</li>
+ <li>Kotlin Coroutine</li>
+ <li>Retrofit 2</li>
+ <li>Dagger Hilt</li>
+ <li>Glide</li>
+</ul>
 <a href="http://soccer-app-backend.herokuapp.com/" traget="_blank">Heroku Linki</a>
 <div>
  <h2>Home Page</h2>
