@@ -50,8 +50,8 @@
                 android:ellipsize="none"
                 android:gravity="start"
                 android:maxLines="3"
-                android:scrollHorizontally="false"
-                android:text="Turn on Night Mode"
+                android:layout_marginHorizontal="8dp"
+                android:text="@string/setting_night_mode_text"
                 android:textAlignment="textStart"
                 android:textSize="16sp"
                 android:textStyle="bold" />
