@@ -19,7 +19,6 @@ class SportRepository @Inject constructor(
     ): Flow<Resource<List<Team?>>> = flow {
         emit(Resource.loading(null))
         try {
-            kotlinx.coroutines.delay(5000L)
             val response = api.getLeagueTeams(searchQuery)
             emit(Resource.success(response.teams))
         } catch (e: Exception) {
@@ -30,7 +29,6 @@ class SportRepository @Inject constructor(
     suspend fun getFixture(): Flow<Resource<List<Fixture?>>> = flow {
         emit(Resource.loading(null))
         try {
-            kotlinx.coroutines.delay(5000L)
             val response = api.getFixture()
             emit(Resource.success(response.fixture))
         } catch (e: Exception) {
