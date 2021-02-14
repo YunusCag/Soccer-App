@@ -2,6 +2,7 @@
 Bu uygulamada kullanılan soccer-app-backend'ini NodeJS ile yazıp Heroku platformuna deploy işlemini gerçekleştirdim. API'deki Takım ve Fikstür bilgileri statiktir.
 <a href="http://soccer-app-backend.herokuapp.com/" traget="_blank">Heroku Linki</a>
 
+SoccerApp uygulaması ile kullanıcı API search işlemini yapabilmektedir.Uygulama aynı zamanda NightMode ve LightMode özelliğini barındırmaktadır.
 
 Uygulama hazırlanırken aşağıdaki yapılar kullanılmıştır:
 <ul>
