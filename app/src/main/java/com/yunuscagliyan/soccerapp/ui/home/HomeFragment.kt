@@ -143,7 +143,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                         navController.navigate(R.id.action_fixture, null, null, extras)
                     }
                     is HomeViewModel.HomeEvent.NavigateSettingScreen -> {
-                        navController.navigate(R.id.action_setting)
+                        navController.navigate(R.id.action_to_setting_fragment)
                     }
                     else -> Unit
                 }

@@ -48,8 +48,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun setUpToolbar(toolbar: Toolbar) {
+        val appBarConfiguration = AppBarConfiguration.Builder(
+            setOf<Int>(
+                R.id.destination_home,
+            )
+        ).build()
         setSupportActionBar(toolbar)
-        NavigationUI.setupActionBarWithNavController(this, navController)
+        NavigationUI.setupActionBarWithNavController(this, navController,appBarConfiguration)
     }
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp()||super.onSupportNavigateUp()

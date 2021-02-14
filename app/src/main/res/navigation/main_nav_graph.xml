@@ -3,19 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav_graph"
-    app:startDestination="@id/destination_home">
+    app:startDestination="@id/destination_splash">
 
     <fragment
         android:id="@+id/destination_home"
         android:name="com.yunuscagliyan.soccerapp.ui.home.HomeFragment"
         android:label="@string/home_app_bar_title"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_fixture"
             app:destination="@id/destination_fixture" />
         <action
-            android:id="@+id/action_setting"
-            app:destination="@id/destination_setting" />
+            android:id="@+id/action_to_setting_fragment"
+            app:destination="@id/destination_setting"
+            app:enterAnim="@anim/anim_slide_in_right_delayed"
+            app:exitAnim="@anim/anim_slide_out_right_delayed"
+            app:popEnterAnim="@anim/anim_slide_in_left_delayed"
+            app:popExitAnim="@anim/anim_slide_out_left_delayed" />
     </fragment>
     <fragment
         android:id="@+id/destination_fixture"
@@ -27,4 +31,19 @@
         android:name="com.yunuscagliyan.soccerapp.ui.setting.SettingFragment"
         android:label="@string/setting_page_app_bar_title"
         tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/destination_splash"
+        android:name="com.yunuscagliyan.soccerapp.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_destination_splash_to_destination_home"
+            app:destination="@id/destination_home"
+            app:enterAnim="@anim/anim_slide_in_right_delayed"
+            app:exitAnim="@anim/anim_slide_out_right_delayed"
+            app:popEnterAnim="@anim/anim_slide_in_left_delayed"
+            app:popExitAnim="@anim/anim_slide_out_left_delayed"
+            app:popUpTo="@id/destination_splash"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>
